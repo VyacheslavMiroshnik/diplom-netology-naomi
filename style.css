@@ -1,137 +1,108 @@
 @font-face {
-    font-family: "Open Sans";
-    src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff");
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: "Open Sans";
-    src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff");
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  /*      общие настройки*/
-  * {
-    margin: 0;
-    padding: 0;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-  }
-  .container {
-    width: 1200px;
-    box-sizing: border-box;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 18px;
-    padding-right: 18px;
-  }
-  .link {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  body {
-    font-family: "Open Sans", Arial, Helvetica, sans-serif;
-  }
-  .visual-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    clip: rect(1px, 1px, 1px, 1px);
-  }
-  /*      общие настройки*/
-  
-  .wrapper-header {
-    background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 450px;
-    position: relative;
-  }
-  
-  .wrapper-header::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background-color: black;
-    opacity: 0.6;
-  }
-  
-  .header {
-    color: #ffffff;
-  }
-  
-  .conteiner-header {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .logo {
-    position: relative;
-    width: 180px;
-    height: 40px;
-    z-index: 1;
-    top: 20px;
-    left: 7px;
-  }
-  
-  .menu {
-    position: relative;
-    z-index: 2;
-    margin-top: 20px;
-  }
-  
-  .menu-list {
-    width: 523px;
-    display: flex;
-    flex-wrap: wrap;
-    list-style-type: none;
-  }
-  
-  .menu-list-items:nth-child(n + 2) {
-    margin-left: 36px;
-  }
-  
-  .menu-list-link {
-    color: inherit;
-    font-size: 13px;
-    font-weight: 400;
-    line-height: 36px;
-    text-transform: uppercase;
-    vertical-align: bottom;
-  }
-  
-  .header-title-block {
-    position: relative;
-    z-index: 2;
-    width: 760px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 105px;
-    margin-bottom: 105px;
-    text-align: center;
-  }
-  
-  .header-title {
-    font-size: 45px;
-    line-height: 75px;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
+  font-family: "Open Sans";
+  src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/*      общие настройки*/
+
+body {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+.container {
+  width: 1200px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+}
+
+.visual-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+/*      общие настройки*/
+
+.wrapper-header {
+  position:relative;
+  min-width: 1200px;
+  background-image: url("https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #000;
+  padding-bottom: 95px;
+  padding-top: 30px;
+  color: #fff;
+}
+
+.wrapper-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+  opacity: 0.6;
+}
+.container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.menu-list-item:nth-child(n + 2) {
+  margin-left: 36px;
+}
+
+.menu-list-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header-title-block {
+  width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 105px;
+  text-align: center;
+}
+
+.header-title {
+  font-size: 45px;
+  line-height: 75px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
   
   /* content*/
-  .wrapper-main {
-    background-color: #ffffff;
-  }
   
   .main {
     color: black;
     display: flex;
+    justify-content: space-between;
     margin-top: 50px;
   }
   
@@ -141,6 +112,8 @@
   
   .card-post {
     display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
   }
   .card-post:nth-child(n + 2) {
     margin-top: 58px;
@@ -148,27 +121,35 @@
   
   .card-image {
     width: 383px;
-    height: 297px;
+
   }
   
   .card-info {
     width: 367px;
-    margin-left: 30px;
   }
   
   .card-tags {
     display: flex;
     flex-wrap: wrap;
-    margin-top: -10px;
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin:0;
   }
   
-  .card-tag {
+  .card-tag-item {
     font-size: 14px;
-    line-height: 40px;
+    line-height: 1.2;
     font-weight: 700;
     text-transform: uppercase;
     color: #b59f5b;
     margin-right: 20px;
+  }
+  .card-tag-item:last-child{
+    margin-right: 0;
+  }
+  .card-tag-link {
+    text-decoration: none;
+    color:inherit;
   }
   .card-title-text {
     font-size: 20px;
@@ -176,21 +157,29 @@
     line-height: 24px;
     text-transform: uppercase;
   }
-  .card-create {
-    display: flex;
+  .card-title-link{
+    text-decoration: none;
+    color: inherit;
+  }
+  .card-information {
     margin-top: 25px;
   }
-  .card-creat-time {
+  .card-time {
     font-size: 12px;
     line-height: 1.2;
     color: #888888;
   }
-  .card-create-author {
+  .card-author {
+display: inline-block;
     margin-left: 15px;
     font-size: 12px;
     line-height: 1.2;
     font-weight: 700;
   }
+.card-author-link{
+  text-decoration: none;
+  color:inherit;
+}
   .card-text {
     font-size: 15px;
     line-height: 22px;
@@ -200,7 +189,9 @@
   /* боковая часть  */
   .right-menu {
     width: 272px;
-    margin-left: 120px;
+  }
+  .aside-block:nth-child(n+2){
+    margin-top:55px;
   }
   .aside-title {
     font-size: 14px;
@@ -208,6 +199,7 @@
     line-height: 17px;
     text-transform: uppercase;
     text-align: center;
+    margin-bottom: 20px;
   }
   .aside-title::after {
     content: "";
@@ -218,58 +210,70 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
-    margin-bottom: 20px;
   }
   .recent-post-card {
     display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+
   }
   .recent-post-card:nth-child(n + 2) {
     margin-top: 20px;
   }
   .recent-post-image {
     width: 70px;
-    height: 75px;
+    margin-right: 20px;
   }
-  .recent-post-info {
-    margin-left: 20px;
+  
+  .recent-post-time{
+    font-size: 12px;
+    line-height: 1.2;
+    color: #888888;
+    display: block;
+    margin-bottom: 10px;
+
   }
-  .card-title {
+  .recent-post-title {
     font-size: 14px;
     font-weight: 700;
     line-height: 18px;
     text-transform: uppercase;
   }
-  .form-item {
-    margin-top: 55px;
+  .recent-post-link{
+    text-decoration: none;
+    color:inherit;
   }
   
+  .search-block{
+    display: flex;
+  }
   .field {
     font-size: 13px;
-    line-height: 40px;
+    line-height: 30px;
     background-color: #f4f7f6;
-    padding-left: 20px;
+    padding: 10px 20px;
     border: none;
     height: 50px;
     vertical-align: middle;
     box-sizing: border-box;
   }
-  .search-field {
-    width: 222px;
-  }
+  
   .button {
     border: none;
     vertical-align: middle;
     background-color: #b59f5b;
     height: 50px;
   }
+
   .search-button {
     width: 50px;
     height: 50px;
-    margin-left: -5px;
     background: url("https://netology-code.github.io/html-2-diploma/sources/images/search.svg")
       no-repeat center;
     background-size: 20px;
     background-color: #b59f5b;
+    border: none;
+    vertical-align: middle;
   }
   
   .mail-menu {
@@ -281,7 +285,7 @@
     box-sizing: border-box;
   }
   
-  .subscribe {
+  .subscribe-button {
     display: block;
     margin-top: 20px;
     width: 272px;
@@ -290,6 +294,10 @@
     line-height: 40px;
     text-transform: uppercase;
     color: #ffffff;
+    border: none;
+    background-color: #b59f5b;
+    height: 50px;
+  }
   }
   .tags {
     margin-top: 60px;
